@@ -8,11 +8,11 @@ const routes: Routes = [
     path: '',
     component: PagesComponent,
     children: [
-      {
-        path: '',
-        redirectTo: 'post',
-        pathMatch: 'full'
-      },
+      // {
+      //   path: '',
+      //   redirectTo: 'post',
+      //   pathMatch: 'full'
+      // },
       { 
         path: 'post',
         loadChildren: () => import('./posts/posts.module').then(m => m.PostsModule)

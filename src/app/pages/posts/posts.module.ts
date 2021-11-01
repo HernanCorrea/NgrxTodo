@@ -3,9 +3,11 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { PostsComponent } from './posts.component';
 import { AddPostComponent } from './add-post/add-post.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { globalModules } from 'src/app/shared/modules.module';
 import { UpdatePostComponent } from './update-post/update-post.component';
+import { StoreModule } from '@ngrx/store';
+import { postReducer } from 'src/app/core/state/post/post.reducer';
+import { POST_STATE_NAME } from 'src/app/core/state/post/post.selector';
 
 const routes: Routes = [
   {
@@ -33,6 +35,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     ...globalModules,
+    StoreModule.forFeature(POST_STATE_NAME, postReducer),
     RouterModule.forChild(routes)
   ]
 })

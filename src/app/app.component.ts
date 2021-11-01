@@ -10,29 +10,29 @@ import { selectChannelName, selectCounter } from './core/state/counter/counter.s
 })
 export class AppComponent implements OnInit {
   constructor(private store: Store<AppStateCounter>) {}
-  counter$ = this.store.select(selectCounter);
-  channelName$ = this.store.select(selectChannelName);
+  // counter$ = this.store.select(selectCounter);
+  // channelName$ = this.store.select(selectChannelName);
 
   ngOnInit(): void {}
 
-  increment(): void {
-    this.store.dispatch(increment());
-  }
+  // increment(): void {
+  //   this.store.dispatch(increment());
+  // }
 
-  decrement(): void {
-    this.store.dispatch(decrement());
+  // decrement(): void {
+  //   this.store.dispatch(decrement());
 
-  }
+  // }
 
-  reset(): void {
-    this.store.dispatch(reset());
-  }
+  // reset(): void {
+  //   this.store.dispatch(reset());
+  // }
 
-  onCustomNumber($event: any): void {
-    this.store.dispatch(customCounter({value: parseInt($event.target.value)}));
-  }
+  // onCustomNumber($event: any): void {
+  //   this.store.dispatch(customCounter({value: parseInt($event.target.value)}));
+  // }
 
-  updateChannelName(): void{
-    this.store.dispatch(updateChannelName());
-  }
+  // updateChannelName(): void{
+  //   this.store.dispatch(updateChannelName());
+  // }
 }
