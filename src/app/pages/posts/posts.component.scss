@@ -1,0 +1,43 @@
+.posts--container {
+  padding: 10px;	
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+    div{
+        flex: 1;
+        
+        &:first-child{
+            flex: 2;
+        }
+    }
+    
+}
+.posts--table{
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid black;
+    th {
+        text-align: left;
+        padding: 8px;
+        background-color: #04AA6D;
+        color: white;
+    }
+    td, th{
+        border: 1px solid black;
+        padding: 10px;
+    }
+    tr:nth-child(even) {
+        background-color: #f0f0f0;
+    }
+    tr:hover{
+        background-color: #ddd;
+    }
+}
+.posts--add{
+    background-color: #04AA6D;
+    cursor: pointer;
+    margin-bottom: 2rem;
+}

@@ -1,0 +1,14 @@
+<div class="add--container">
+    <H1>Add</H1>
+    <form class="add-form" [formGroup]="postForm" (ngSubmit)="onAddPost()">
+        <div class="mb-3">
+            <label for="">Title</label>
+            <input type="text" placeholder="Title" class="form-control" formControlName="title">
+        </div>
+        <div class="mb-3">
+            <label for="">Content</label>
+            <textarea placeholder="Content" class="form-control" formControlName="content"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="!postForm.valid">Add</button>
+    </form>
+</div>

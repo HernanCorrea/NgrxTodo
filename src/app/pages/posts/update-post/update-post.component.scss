@@ -1,0 +1,11 @@
+.update--container{
+    padding: 0 5rem 5rem 5rem;
+}
+.update-form{
+    display: flex;
+    flex-direction: column;
+    div {
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,11 @@
+.add--container{
+    padding: 0 5rem 5rem 5rem;
+}
+.add-form{
+    display: flex;
+    flex-direction: column;
+    div {
+        display: flex;
+        flex-direction: column;
+    }
+}
