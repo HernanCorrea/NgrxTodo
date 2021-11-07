@@ -1,38 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { decrement, increment, reset, customCounter, updateChannelName } from './core/state/counter/counter.actions';
-import {AppStateCounter} from './core/state/app.state';
-import { selectChannelName, selectCounter } from './core/state/counter/counter.selector';
+import { Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
+import { AppState } from './core/state/app.state';
+import { getErrorMessage, getLoading } from './core/state/shared/shared.selector';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  constructor(private store: Store<AppStateCounter>) {}
-  // counter$ = this.store.select(selectCounter);
-  // channelName$ = this.store.select(selectChannelName);
+  constructor(private store: Store<AppState>) {}
 
-  ngOnInit(): void {}
+  showLoading: Observable<boolean>;
 
-  // increment(): void {
-  //   this.store.dispatch(increment());
-  // }
+  ngOnInit(): void {
+    this.showLoading = this.store.select(getLoading).pipe();
+  }
 
-  // decrement(): void {
-  //   this.store.dispatch(decrement());
-
-  // }
-
-  // reset(): void {
-  //   this.store.dispatch(reset());
-  // }
-
-  // onCustomNumber($event: any): void {
-  //   this.store.dispatch(customCounter({value: parseInt($event.target.value)}));
-  // }
-
-  // updateChannelName(): void{
-  //   this.store.dispatch(updateChannelName());
-  // }
+ 
 }

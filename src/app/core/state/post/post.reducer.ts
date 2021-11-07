@@ -3,7 +3,7 @@ import { addPost, deletePost, updatePost } from './post.actions';
 import { PostI, PostState } from './post.model';
 import { initialStatePost } from './post.state';
 
-export const postReducer = createReducer(
+export const PostReducer = createReducer(
   initialStatePost,
   on(addPost, (state: PostState, action) => {
     const newPost = {

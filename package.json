@@ -19,6 +19,7 @@
     "@angular/platform-browser": "~11.2.6",
     "@angular/platform-browser-dynamic": "~11.2.6",
     "@angular/router": "~11.2.6",
+    "@ngrx/effects": "^12.5.1",
     "@ngrx/store": "^12.4.0",
     "@ngrx/store-devtools": "^12.5.0",
     "@popperjs/core": "^2.10.2",

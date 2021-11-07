@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { PagesComponent } from './pages.component';
+import { ComponentsModule } from '../shared/components/components.module';
 
 const routes: Routes = [
   {
@@ -13,6 +14,10 @@ const routes: Routes = [
       //   redirectTo: 'post',
       //   pathMatch: 'full'
       // },
+      { 
+        path: 'login',
+        loadChildren: () => import('./login/login.module').then(m => m.LoginModule)
+      },
       { 
         path: 'post',
         loadChildren: () => import('./posts/posts.module').then(m => m.PostsModule)
@@ -27,7 +32,8 @@ const routes: Routes = [
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    ComponentsModule
   ],
   exports: [RouterModule]
 })

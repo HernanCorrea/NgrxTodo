@@ -1,8 +1,9 @@
-import { counterReducer } from './counter/counter.reducer';
-import { postReducer } from './post/post.reducer';
-import { POST_STATE_NAME } from './post/post.selector';
+import { AuthReducer } from './auth/auth.reducer';
+import { AUTH_STATUS_NAME } from './auth/auth.selector';
+import { SharedReducer } from './shared/shared.recuder';
+import { SHARED_STATE_NAME } from './shared/shared.selector';
 
 export const renderState = {
-  count: counterReducer,
-  [POST_STATE_NAME]: postReducer,
+  [AUTH_STATUS_NAME]: AuthReducer,
+  [SHARED_STATE_NAME]: SharedReducer
 };
