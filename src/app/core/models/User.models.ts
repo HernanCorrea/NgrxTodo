@@ -4,6 +4,6 @@ export class User {
         private token: string,
         private localId: string,
         private expirationDate: Date,
-        private registered: boolean
+        private registered: boolean = false
     ){}
 }

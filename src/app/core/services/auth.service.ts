@@ -18,6 +18,14 @@ export class AuthService {
             returnSecureToken: true
         });
     }
+    
+    signUp(email: string, password: string): Observable<AuthResponseData> {
+        return this.http.post<AuthResponseData>(`https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${environment.FIREBASE_API_KEY}`, {
+            email,
+            password,
+            returnSecureToken: true
+        });
+    }
 
     formatUser(data: AuthResponseData){
         return new User(
@@ -35,6 +43,7 @@ export class AuthService {
             'INVALID_PASSWORD': 'Invalid password',
             'USER_DISABLED': 'User disabled',
             'INVALID_EMAIL': 'Invalid email address',
+            'EMAIL_EXISTS': 'Email already exists',
         }
         return messages[message] || message;
     }

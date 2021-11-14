@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { globalModules } from './shared/modules.module';
 import { renderState } from './core/state/render.state';
 import { ComponentsModule } from './shared/components/components.module';
+import { AuthEffect } from './core/state/auth/auth.effects';
 
 @NgModule({
   imports: [
@@ -20,7 +21,7 @@ import { ComponentsModule } from './shared/components/components.module';
     BrowserModule,
     HttpClientModule,
     StoreModule.forRoot(renderState),
-    EffectsModule.forRoot([]),
+    EffectsModule.forRoot([AuthEffect]),
     StoreDevtoolsModule.instrument({
       logOnly: environment.production,
       autoPause: true,
