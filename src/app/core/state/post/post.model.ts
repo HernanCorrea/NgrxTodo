@@ -1,8 +1,10 @@
+import { Post } from "../../models/Post.models";
+
 export interface PostI {
-    id: number;
+    id: string;
     title: string;
-    content: string;
+    description: string;
 }
 export interface PostState {
-    postList: PostI[];
+    postList: Post[];
 }

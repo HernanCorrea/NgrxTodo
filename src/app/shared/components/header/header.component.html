@@ -6,16 +6,16 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" routerLinkActive="active-link" routerLink="post">Post</a>
+          <a class="nav-link" href="javascript:void(0)" routerLinkActive="active-link" routerLink="post">Post</a>
         </li>
         <li class="nav-item" *ngIf="!(isAuthenticated$ | async)">
-          <a class="nav-link" routerLinkActive="active-link" [routerLink]="['/login']">Login</a>
+          <a class="nav-link" href="javascript:void(0)"  routerLinkActive="active-link" [routerLink]="['/login']">Login</a>
         </li>
         <li class="nav-item"  *ngIf="!(isAuthenticated$ | async)">
-          <a class="nav-link" routerLinkActive="active-link"  [routerLink]="['/signup']">SignUp</a>
+          <a class="nav-link" href="javascript:void(0)"  routerLinkActive="active-link"  [routerLink]="['/signup']">SignUp</a>
         </li>
         <li class="nav-item" *ngIf="isAuthenticated$ | async">
-          <a class="nav-link" (click)="logOut()">LogOut</a>
+          <a class="nav-link" href="javascript:void(0)"  (click)="logOut()">LogOut</a>
         </li>
         <!-- Angular directive if route is active -->
 

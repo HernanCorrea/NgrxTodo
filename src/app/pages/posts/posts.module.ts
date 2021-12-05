@@ -8,6 +8,8 @@ import { UpdatePostComponent } from './update-post/update-post.component';
 import { StoreModule } from '@ngrx/store';
 import { PostReducer } from 'src/app/core/state/post/post.reducer';
 import { POST_STATE_NAME } from 'src/app/core/state/post/post.selector';
+import { EffectsModule } from '@ngrx/effects';
+import { PostEffects } from 'src/app/core/state/post/post.effects';
 
 const routes: Routes = [
   {
@@ -36,6 +38,7 @@ const routes: Routes = [
     CommonModule,
     ...globalModules,
     StoreModule.forFeature(POST_STATE_NAME, PostReducer),
+    EffectsModule.forFeature([PostEffects]),
     RouterModule.forChild(routes)
   ]
 })

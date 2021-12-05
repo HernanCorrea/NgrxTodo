@@ -6,4 +6,8 @@ export class User {
         private expirationDate: Date,
         private registered: boolean = false
     ){}
+
+    get expireDate(): any{
+        return this.expirationDate;
+    }
 }

@@ -19,7 +19,7 @@ export class AddPostComponent implements OnInit {
     this.postForm = new FormGroup(
       {
         title: new FormControl('', [Validators.required]),
-        content: new FormControl('', [Validators.required]),
+        description: new FormControl('', [Validators.required]),
       }
     );
   }

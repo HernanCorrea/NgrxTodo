@@ -15,10 +15,10 @@ export const getPostList = createSelector(
     selectPostState,
     (post: PostState) => post.postList
 );
-export const getPostById = (id: number) => createSelector(
+export const getPostById = (id: string) => createSelector(
     selectPostState,
     (post: PostState) => {
-        return post.postList.find(p => p.id === id)
+        return post.postList?.find(p => p.id === id)
     }
 );
  

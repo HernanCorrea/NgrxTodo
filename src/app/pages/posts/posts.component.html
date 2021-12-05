@@ -9,14 +9,14 @@
             <thead>
                 <th>Id</th>
                 <th>Title</th>
-                <th>Content</th>
+                <th>description</th>
                 <th style="width:200px">Action</th>
             </thead>
             <tbody>
                 <tr *ngFor="let post of (postList$ | async)">
                     <td>{{post.id}}</td>
                     <td>{{post.title}}</td>
-                    <td>{{post.content}}</td>
+                    <td>{{post.description}}</td>
                     <td>
                         <button class="btn btn-info" [routerLink]="'update/'+ post.id">Update</button>
                         &nbsp;
